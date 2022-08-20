@@ -33,3 +33,39 @@ describe '#reverse_string' do
   end
   
 end
+
+
+def happy_new_year
+  counter = 10
+  until counter == 0
+    puts counter
+    counter -= 1
+  end
+  puts "Happy New Year!"
+  
+end
+
+
+def reverse_string(string)
+  new_string = []
+  i = string.length-1
+  while i >= 0
+    new_string.push(string[i])
+    i -= 1
+  end
+  new_string.join
+end
+
+def fizzbuzz_printer
+  1.upto(100) do |n|
+    fizz = (n % 3 == 0) ? 'Fizz' : nil
+    buzz = (n % 5 == 0) ? 'Buzz' : nil
+    puts case
+      when fizz || buzz
+        "#{fizz}#{buzz}"
+      else
+        n
+    end
+  end
+  
+end
